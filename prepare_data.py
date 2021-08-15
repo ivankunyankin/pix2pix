@@ -7,7 +7,7 @@ DATA_FOLDER_PATH = "data"
 MIN_CONTOUR_WIDTH = 30
 MIN_CONTOUR_HEIGHT = 30
 BUFFER_SIZE = 10
-VAL_SIZE = 0.1
+VAL_SIZE = 0.02
 
 if not os.path.exists(f"{DATA_FOLDER_PATH}/train"):
     os.mkdir(f"{DATA_FOLDER_PATH}/train")
