@@ -95,9 +95,9 @@ def main():
             x, y = x.to(torch.float32).to(DEVICE), y.to(torch.float32).to(DEVICE)
             with torch.no_grad():
                 y_fake = gen(x)
-            img_grid_contour = make_grid(x)#, normalize=True)
-            img_grid_real = make_grid(y)#, normalize=True)
-            img_grid_fake = make_grid(y_fake)#, normalize=True)
+            img_grid_contour = make_grid(x * 0.5 + 0.5)
+            img_grid_real = make_grid(y * 0.5 + 0.5)
+            img_grid_fake = make_grid(y_fake * 0.5 + 0.5)
 
             writer.add_image("Contour", img_grid_contour, global_step=batch_idx)
             writer.add_image("Real", img_grid_real, global_step=batch_idx)
