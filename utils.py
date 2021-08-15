@@ -1,5 +1,6 @@
 import torch
 import albumentations as A
+import albumentations
 from albumentations.pytorch import ToTensorV2
 
 
