@@ -13,26 +13,26 @@ class SimpsonsDataset(Dataset):
         self.collection = []
         for image_path in os.listdir(root_dir):
             if image_path.endswith(".png"):
-                label_path = image_path.replace(".png", f"_contour.png")
-                if os.path.exists(os.path.join(self.root_dir, label_path)):
+                contour_path = image_path.replace(".png", f"_contour.png")
+                if os.path.exists(os.path.join(self.root_dir, contour_path)):
                     self.collection.append((
                         os.path.join(os.path.join(self.root_dir, image_path)),
-                        os.path.join(os.path.join(self.root_dir, label_path)),
+                        os.path.join(os.path.join(self.root_dir, contour_path)),
                     ))
 
     def __len__(self):
         return len(self.collection)
 
     def __getitem__(self, index):
-        image_path, label_path = self.collection[index]
+        image_path, contour_path = self.collection[index]
         image = np.array(Image.open(image_path))
-        label = np.array(Image.open(label_path))
+        contour = np.array(Image.open(contour_path))
 
-        augmentations = both_transform(image=image, image0=label)
+        augmentations = both_transform(image=image, image0=contour)
         image = augmentations["image"]
-        label = augmentations["image0"]
+        contour = augmentations["image0"]
 
         image = transform_only_input(image=image)["image"]
-        label = transform_only_mask(image=label)["image"]
+        contour = transform_only_mask(image=contour)["image"]
 
-        return image, label
+        return contour, image
