@@ -6,14 +6,13 @@ Lightweight PyTorch implementation of pix2pix (https://arxiv.org/pdf/1611.07004.
 
 After 10 epochs
 
-<div align="center"><i><small>Ground truth (real) example</small></i></div>
-<p align="center"><img width="250" src="https://github.com/ivankunyankin/pix2pix/blob/master/assets/real_example.png"></p>
+<div align="center"><i><small>From left to rigth: Real image, Input image (sketch), Generated (fake) image</small></i></div>
 
-<div align="center"><i><small>Input (sketch) example</small></i></div>
-<p align="center"><img width="250" src="https://github.com/ivankunyankin/pix2pix/blob/master/assets/input_example.png"></p>
-
-<div align="center"><i><small>Generated image (fake) example</small></i></div>
-<p align="center"><img width="250" src="https://github.com/ivankunyankin/pix2pix/blob/master/assets/fake_example.png"></p>
+<p float="left">
+  <img width="150" src="https://github.com/ivankunyankin/pix2pix/blob/master/assets/real_example.png">
+  <img width="150" src="https://github.com/ivankunyankin/pix2pix/blob/master/assets/input_example.png">
+  <img width="150" src="https://github.com/ivankunyankin/pix2pix/blob/master/assets/fake_example.png">
+</p>
 
 ## Installation
 
