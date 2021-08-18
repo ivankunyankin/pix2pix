@@ -1,3 +1,4 @@
+import os
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -24,8 +25,12 @@ def main():
     NUM_EPOCHS = 500
     LOAD_MODEL = False
     SAVE_MODEL = True
-    CHECKPOINT_DISC = "checkpoints/disc.pth.tar"
-    CHECKPOINT_GEN = "checkpoints/gen.pth.tar"
+    CHECKPOINT_DIR = "checkpoints"
+    CHECKPOINT_DISC = os.path.join(CHECKPOINT_DIR, "disc.pth.tar")
+    CHECKPOINT_GEN = os.path.join(CHECKPOINT_DIR, "gen.pth.tar")
+
+    if not os.path.exists(CHECKPOINT_DIR):
+        os.mkdir(CHECKPOINT_DIR)
 
     disc = Discriminator().to(DEVICE)
     gen = Generator().to(DEVICE)
