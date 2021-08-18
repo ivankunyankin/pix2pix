@@ -104,9 +104,10 @@ def main():
             img_grid_real = make_grid(y * 0.5 + 0.5)
             img_grid_fake = make_grid(y_fake * 0.5 + 0.5)
 
-            writer.add_image("Contour", img_grid_contour, global_step=batch_idx)
-            writer.add_image("Real", img_grid_real, global_step=batch_idx)
-            writer.add_image("Fake", img_grid_fake, global_step=batch_idx)
+            if batch_idx == len(val_loader) - 1:
+                writer.add_image("Contour", img_grid_contour, global_step=epoch)
+                writer.add_image("Real", img_grid_real, global_step=epoch)
+                writer.add_image("Fake", img_grid_fake, global_step=epoch)
 
 
 if __name__ == "__main__":
