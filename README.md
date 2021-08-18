@@ -9,9 +9,9 @@ After 10 epochs
 <div align="center"><i><small>From left to rigth: Real image, Input image (sketch), Generated (fake) image</small></i></div>
 
 <p float="left">
-  <img width="150" src="https://github.com/ivankunyankin/pix2pix/blob/master/assets/real_example.png">
-  <img width="150" src="https://github.com/ivankunyankin/pix2pix/blob/master/assets/input_example.png">
-  <img width="150" src="https://github.com/ivankunyankin/pix2pix/blob/master/assets/fake_example.png">
+  <img width="32%" src="https://github.com/ivankunyankin/pix2pix/blob/master/assets/real_example.png">
+  <img width="32%" src="https://github.com/ivankunyankin/pix2pix/blob/master/assets/input_example.png">
+  <img width="32%" src="https://github.com/ivankunyankin/pix2pix/blob/master/assets/fake_example.png">
 </p>
 
 ## Installation
